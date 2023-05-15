@@ -30,11 +30,8 @@ public class PolicyHandler {
         @Payload DeliveryCompleted deliveryCompleted
     ) {
         DeliveryCompleted event = deliveryCompleted;
-        System.out.println(
-            "\n\n##### listener DecreaseStock : " + deliveryCompleted + "\n\n"
-        );
 
-        // Sample Logic //
+
         Inventory.decreaseStock(event);
     }
 

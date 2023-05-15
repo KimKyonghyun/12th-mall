@@ -8,9 +8,5 @@ import lombok.Data;
 @Data
 public class ReturnDeliveryCommand {
 
-    @Id
-    //@GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
-
     private String courier;
 }

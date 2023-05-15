@@ -30,16 +30,6 @@ public class PolicyHandler {
         @Payload OrderPlaced orderPlaced
     ) {
         OrderPlaced event = orderPlaced;
-        System.out.println(
-            "\n\n##### listener StartDelivery : " + orderPlaced + "\n\n"
-        );
-
-        // Comments //
-        //notify to User
-        // send Payload to CJ
-        // save our repo.
-
-        // Sample Logic //
         Delivery.startDelivery(event);
     }
 
@@ -51,11 +41,6 @@ public class PolicyHandler {
         @Payload OrderCanceled orderCanceled
     ) {
         OrderCanceled event = orderCanceled;
-        System.out.println(
-            "\n\n##### listener CancelDelivery : " + orderCanceled + "\n\n"
-        );
-
-        // Sample Logic //
         Delivery.cancelDelivery(event);
     }
 }
